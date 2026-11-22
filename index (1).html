@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cut Connect — Creative Marketplace</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a30;--panel2:#18213a;--line:#303b5c;--purple:#8657ff;--purple2:#a78bfa;--text:#f7f7ff;--muted:#aab3cc;--green:#4ade80;--gold:#fbbf24}*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 450px at 75% -10%,#30205e 0%,transparent 60%),var(--bg);color:var(--text);font:15px/1.55 Inter,system-ui,Arial}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1160px;margin:auto;padding:0 22px}header{position:sticky;top:0;z-index:20;background:#0b1020ed;backdrop-filter:blur(14px);border-bottom:1px solid #242d49}.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:21px;font-weight:900;letter-spacing:.5px;color:white;text-decoration:none}.brand b{color:var(--purple2)}.navlinks{display:flex;gap:22px;align-items:center}.navlinks a,.footlinks a{color:var(--muted);text-decoration:none;font-size:14px}.navlinks a:hover,.footlinks a:hover{color:white}.btn{border:1px solid var(--purple);background:linear-gradient(135deg,#8657ff,#6840d7);color:white;border-radius:11px;padding:11px 17px;font-weight:750;box-shadow:0 6px 24px #7045e533}.btn:hover{filter:brightness(1.12)}.btn.secondary{background:#171e36;border:1px solid var(--purple);box-shadow:none}.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text)}.btn.small{padding:8px 14px}.mobile-menu{display:none}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center;padding:76px 0 55px}.eyebrow{color:#bdaaff;text-transform:uppercase;font-size:11px;font-weight:850;letter-spacing:1.7px}.hero h1{font-size:clamp(38px,6vw,65px);line-height:1.04;letter-spacing:-2px;margin:12px 0 18px}.hero h1 span{color:var(--purple2)}.lead{color:var(--muted);font-size:17px;max-width:610px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.hero-card,.card,.panel{background:linear-gradient(145deg,#151d35,#10172b);border:1px solid var(--line);border-radius:19px;padding:22px}.hero-card{box-shadow:0 22px 70px #0005}.hero-card h3{margin:0 0 14px;font-size:18px}.mini-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #28324d}.mini-row:last-of-type{border:0}.mini-row span{color:var(--muted)}.mini-row strong{font-size:14px}.tag{display:inline-flex;background:#272044;border:1px solid #59439a;color:#d9ceff;border-radius:30px;padding:5px 10px;font-size:11px;margin:5px 4px 0 0}.section{padding:48px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.section-head h2{font-size:30px;line-height:1.15;margin:7px 0}.section-head p{color:var(--muted);max-width:420px;margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid.two{grid-template-columns:repeat(2,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}.card{padding:19px;transition:.18s}.card:hover{transform:translateY(-3px);border-color:#7754d6}.card h3{margin:8px 0 5px;font-size:17px}.card p{color:var(--muted);margin:5px 0 13px;font-size:13px}.iconbox{height:43px;width:43px;border-radius:13px;background:#2a2250;display:grid;place-items:center;font-size:22px}.stepnum{color:#c5b6ff;font-weight:900;font-size:13px}.step h3{margin:6px 0}.step p{margin:0}.page{display:none;padding:35px 0 70px;min-height:65vh}.page.active{display:block}.page-title{font-size:34px;margin:5px 0}.muted{color:var(--muted)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.field{display:block;margin:12px 0;color:var(--muted);font-size:13px}.field input,.field select,.field textarea,.search{display:block;width:100%;margin-top:6px;padding:12px 13px;border-radius:10px;border:1px solid #394565;background:#0b1225;color:white;outline:none}.field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:var(--purple)}.field textarea{min-height:95px;resize:vertical}.search{max-width:440px;margin:0}.profile-top{display:flex;gap:17px;align-items:center}.avatar{width:62px;height:62px;border-radius:18px;background:linear-gradient(135deg,#8b5cf6,#4338ca);display:grid;place-items:center;font-size:24px;font-weight:900}.price{color:#d6c9ff;font-weight:850}.card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.badge{font-size:11px;border:1px solid #3f4b6b;border-radius:20px;padding:4px 8px;color:#c5cde0}.badge.green{color:var(--green);border-color:#286443}.notice{font-size:12px;color:#f6d68a;background:#342b18;border:1px solid #685127;padding:11px 13px;border-radius:10px;margin-top:14px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tab{padding:8px 12px;border:1px solid var(--line);border-radius:9px;color:var(--muted);background:transparent}.tab.active{border-color:var(--purple);color:white;background:#251d46}.split{display:grid;grid-template-columns:1fr 1fr;gap:17px}.listrow{display:flex;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid #28324d}.listrow:last-child{border:0}.modal{display:none;position:fixed;inset:0;background:#050817d9;z-index:50;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.dialog{width:min(540px,100%);max-height:92vh;overflow:auto;background:#131b31;border:1px solid #55428d;border-radius:19px;padding:22px;box-shadow:0 25px 90px #0009}.dialog-head{display:flex;align-items:center;justify-content:space-between}.dialog-head h2{margin:0}.close{border:0;background:none;color:white;font-size:27px}.toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#202b49;border:1px solid #6d58a9;padding:12px 17px;border-radius:12px;z-index:80;max-width:90%;text-align:center}.empty{padding:25px;text-align:center;color:var(--muted);border:1px dashed #465170;border-radius:13px}.cta{display:flex;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(120deg,#201a43,#17213a);border:1px solid var(--purple);border-radius:19px;padding:25px;margin:30px 0}.cta h2{margin:4px 0}.cta p{color:var(--muted);margin:0}footer{border-top:1px solid #27304b;padding:28px 0;color:var(--muted);font-size:13px}.footrow{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footlinks{display:flex;gap:16px;flex-wrap:wrap}.hidden{display:none!important}
+@media(max-width:820px){.navlinks{display:none}.mobile-menu{display:block}.hero{grid-template-columns:1fr;padding:48px 0 30px}.grid,.grid.four{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:8px}.split{grid-template-columns:1fr}}
+@media(max-width:520px){.wrap{padding:0 16px}.nav{height:64px}.hero h1{font-size:43px}.grid,.grid.two,.grid.four{grid-template-columns:1fr}.cta{display:block}.cta .btn{margin-top:16px}.page-title{font-size:29px}}
+
+/* Bottom nav (Instagram style) */
+body{padding-bottom:76px}
+.toast{bottom:92px}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:60;height:64px;padding:0 10px env(safe-area-inset-bottom,0px);box-sizing:content-box;background:#0b1020f2;backdrop-filter:blur(14px);border-top:1px solid #242d49;display:flex;align-items:center;justify-content:space-around}
+.bn-item{flex:1;max-width:120px;height:46px;border:0;background:none;color:#f7f7ff;display:grid;place-items:center;border-radius:23px;transition:.15s;-webkit-tap-highlight-color:transparent}
+.bn-item svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.bn-item.active{background:#251d46}
+.bn-item.active svg.fillable{fill:currentColor}
+.bn-avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#4338ca);display:grid;place-items:center;font-size:13px;font-weight:900;color:#fff;border:2px solid #f7f7ff}
+.bn-item.active .bn-avatar{border-color:#a78bfa}
+
+/* v3 tweaks */
+.iam-row{align-items:center}
+.iam-btn{font-size:17px;padding:13px 22px}
+.iam-blank{display:inline-block;min-width:92px;text-align:center;border-bottom:2px solid #fff;margin-left:4px;line-height:1}
+.iam-opts{display:none;gap:10px;align-items:center}
+.iam-opts.show{display:flex;animation:iamIn .18s ease}
+@keyframes iamIn{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+@media(max-width:520px){.iam-row{flex-direction:column;align-items:flex-start}.iam-opts{width:100%}.iam-opts .btn{flex:1}}
+.footcol{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+.dev{color:var(--muted)}.dev b{color:white}
+.dp-row{display:flex;align-items:center;gap:14px;margin:16px 0 4px}
+.dp-big{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#8b5cf6,#4338ca) center/cover no-repeat;display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;border:2px solid #a78bfa}
+/* smaller bottom nav */
+body{padding-bottom:64px}.toast{bottom:80px}
+.bottom-nav{height:50px;padding:0 8px env(safe-area-inset-bottom,0px)}
+.bn-item{height:38px;max-width:96px;border-radius:19px}
+.bn-item svg{width:22px;height:22px;stroke-width:1.8}
+.bn-avatar{width:24px;height:24px;border-width:1.5px;background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden}
+.bn-avatar svg{width:14px;height:14px;stroke-width:2}
+.bn-item.active{background:#251d46}
+
+/* Running color border on all boxes */
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spinBorder{to{--ang:360deg}}
+:root{--rainbow:#4c1d95,#8657ff,#c4b5fd,#a78bfa,#6d28d9,#4c1d95}
+.card,.panel,.hero-card,.cta,.dialog,.empty,.field input,.field select,.field textarea,.search{
+  border:2px solid transparent;
+  animation:spinBorder 4s linear infinite;
+}
+.card,.panel,.hero-card{background:linear-gradient(145deg,#151d35,#10172b) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.cta{background:linear-gradient(120deg,#201a43,#17213a) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.dialog{background:linear-gradient(#131b31,#131b31) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.empty{background:linear-gradient(#0f1630,#0f1630) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.field input,.field select,.field textarea,.search{background:linear-gradient(#0b1225,#0b1225) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.card:hover,.field input:focus,.field select:focus,.field textarea:focus,.search:focus{border-color:transparent}
+.card .card,.panel .card{background:linear-gradient(145deg,#18213a,#121a30) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+@media(prefers-reduced-motion:reduce){.card,.panel,.hero-card,.cta,.dialog,.empty,.field input,.field select,.field textarea,.search{animation:none}}
+
+.check{display:flex;gap:10px;align-items:flex-start;margin:14px 0 4px;color:var(--muted);font-size:13px;line-height:1.45}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:#8657ff;flex:none}
+.check a{color:#c5b6ff}
+.notice.err{color:#ffb4c2;background:#3a1620;border-color:#8a2f45}
+.terms h3{margin:20px 0 6px;font-size:17px}.terms p{color:var(--muted);margin:0 0 6px}
+
+/* login gate + welcome */
+.hero{grid-template-columns:1fr}
+.welcome{font-size:clamp(28px,6vw,44px);font-weight:900;letter-spacing:-1px;color:var(--purple2);margin-bottom:14px;line-height:1.1}
+.welcome:empty{display:none}
+body.locked main,body.locked footer,body.locked .bottom-nav,body.locked .nav>div,body.locked .navlinks{display:none!important}
+body.locked{padding-bottom:0}
+.modal.lock .close{display:none}
+.terms-mini{margin:6px 0 4px;color:var(--muted);font-size:12px}
+.terms-mini summary{cursor:pointer;color:#c5b6ff}
+.terms-mini p{margin:6px 0 0}
+
+.dev-entry{margin-top:14px;text-align:center;font-size:12px}
+.dev-entry a{color:#8e98b8;text-decoration:underline}
+#devBox{gap:8px;margin-top:8px}
+#devBox input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid #394565;background:#0b1225;color:#fff;outline:none;min-width:0}
+
+/* welcome: right under header, with shine */
+#home{padding-top:18px}
+.hero{padding:26px 0 50px}
+.welcome{display:inline-block;margin:0;line-height:1.15;
+  background:linear-gradient(100deg,#8657ff 0%,#a78bfa 35%,#ffffff 50%,#a78bfa 65%,#8657ff 100%);
+  background-size:250% 100%;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  filter:drop-shadow(0 0 10px #8657ff80);
+  animation:welcomeShine 3s linear infinite}
+@keyframes welcomeShine{from{background-position:150% 0}to{background-position:-50% 0}}
+.welcome:empty{display:none}
+@media(prefers-reduced-motion:reduce){.welcome{animation:none}}
+
+/* ===== v-final polish ===== */
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+::selection{background:#8657ff88;color:#fff}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:#3a2f6e;border-radius:8px}::-webkit-scrollbar-track{background:transparent}
+
+/* welcome: sharp white shine (no blur) */
+#home{padding-top:18px}
+.hero{padding:48px 0 50px}
+.welcome{filter:none!important;
+  background-image:linear-gradient(100deg,#8657ff 0%,#a78bfa 38%,#ffffff 50%,#a78bfa 62%,#8657ff 100%);
+  background-size:250% 100%}
+/* brand: same white shine */
+.brand .bt,.brand b{display:inline-block;background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:welcomeShine 3s linear infinite}
+.brand .bt{background-image:linear-gradient(100deg,#d9d2ff 0%,#d9d2ff 38%,#ffffff 50%,#d9d2ff 62%,#d9d2ff 100%)}
+.brand b{background-image:linear-gradient(100deg,#a78bfa 0%,#a78bfa 38%,#ffffff 50%,#a78bfa 62%,#a78bfa 100%);animation-delay:.3s}
+@media(prefers-reduced-motion:reduce){.brand .bt,.brand b{animation:none}}
+
+/* eye buttons */
+.eye-wrap{position:relative;display:block;margin-top:6px}
+.eye-wrap>input,.eye-wrap>select{margin-top:0!important;padding-right:46px}
+.eye-wrap.sel>select,.eye-wrap.sel>input{padding-right:74px}
+.eye-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:34px;height:34px;border:0;background:transparent;color:#aab3cc;border-radius:50%;display:grid;place-items:center;padding:0}
+.eye-wrap.sel .eye-btn{right:32px}
+.eye-btn:active{background:#251d46;color:#fff}
+.eye-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.peek{display:none;margin-top:6px;font-size:12.5px;color:#c5b6ff}
+#devBox .eye-wrap{flex:1;margin-top:0;min-width:0}
+#devBox .eye-wrap>input{width:100%;padding:10px 46px 10px 12px}
+
+/* smoother, nicer feel */
+.page.active{animation:pageIn .35s ease}
+@keyframes pageIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.modal.show .dialog{animation:dlgPop .25s ease}
+@keyframes dlgPop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.btn{transition:transform .15s,filter .15s,box-shadow .15s}
+.btn:active{transform:scale(.96)}
+.btn:hover{box-shadow:0 8px 28px #7045e566}
+.field input:focus,.field select:focus,.field textarea:focus,.search:focus{box-shadow:0 0 0 3px #8657ff40}
+.card{transition:transform .2s,box-shadow .2s}
+.card:hover{box-shadow:0 14px 40px #0006,0 0 0 1px #8657ff33}
+.iconbox{transition:transform .2s}.card:hover .iconbox{transform:scale(1.1) rotate(-4deg)}
+.bn-item{transition:background .2s,transform .15s}
+.bn-item:active{transform:scale(.9)}
+.bn-item.active svg{transform:scale(1.1)}
+.bn-item svg{transition:transform .2s}
+.toast{animation:toastIn .25s ease}
+@keyframes toastIn{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
+header{box-shadow:0 8px 30px #0004}
+.section-head h2{letter-spacing:-.5px}
+@media(prefers-reduced-motion:reduce){.page.active,.modal.show .dialog,.toast{animation:none}}
+
+/* welcome color + Get work done shine + aligned eyes */
+.welcome{background-image:linear-gradient(100deg,#f59e0b 0%,#fbbf24 38%,#ffffff 50%,#fbbf24 62%,#f59e0b 100%)}
+.eye-btn{z-index:2}
+.eye-wrap.sel .eye-btn{right:6px}
+.eye-wrap.sel>select,.eye-wrap.sel>input{padding-right:78px}
+.eye-wrap.sel>select{-webkit-appearance:none;appearance:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23aab3cc' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 46px center/14px 14px padding-box,linear-gradient(#0b1225,#0b1225) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.eye-wrap.sel>input[type=date]{position:relative;color-scheme:dark;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23aab3cc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='16' rx='3'/%3E%3Cpath d='M3 10h18M8 3v4M16 3v4'/%3E%3C/svg%3E") no-repeat right 46px center/16px 16px padding-box,linear-gradient(#0b1225,#0b1225) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box}
+.eye-wrap.sel>input[type=date]::-webkit-calendar-picker-indicator{opacity:0;position:absolute;left:0;top:0;width:100%;height:100%;cursor:pointer}
+
+/* slight highlight under Welcome */
+.hero .eyebrow{display:inline-block;color:#e4dcff;background:#8657ff26;border:1px solid #8657ff4d;padding:5px 11px;border-radius:9px}
+
+/* hero: running border chip, purple Find talent, shining Get work done */
+.hero .eyebrow{display:inline-block;color:#e4dcff;padding:5px 12px;border-radius:10px;border:1px solid transparent;
+  background:linear-gradient(#1a1540,#1a1540) padding-box,conic-gradient(from var(--ang),var(--rainbow)) border-box;
+  animation:spinBorder 4s linear infinite}
+.hero h1{color:var(--purple2)}
+.hero h1 span{display:inline-block;background-image:linear-gradient(100deg,#a78bfa 0%,#a78bfa 38%,#ffffff 50%,#a78bfa 62%,#a78bfa 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:welcomeShine 3s linear infinite}
+@media(prefers-reduced-motion:reduce){.hero .eyebrow,.hero h1 span{animation:none}}
+
+/* shining eyebrows, bolder sub text */
+.shine-eyebrow{display:inline-block;background-image:linear-gradient(100deg,#bdaaff 0%,#bdaaff 38%,#ffffff 50%,#bdaaff 62%,#bdaaff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:welcomeShine 3s linear infinite}
+.bold-p{font-weight:600;color:#c3cbe0}
+@media(prefers-reduced-motion:reduce){.shine-eyebrow{animation:none}}
+
+/* gaps, gold/white shine, feed + chat */
+.hero{padding:48px 0 8px}
+.hero + .section{padding-top:14px}
+.shine-gold,.shine-gold-lt{display:inline-block;background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:welcomeShine 3s linear infinite}
+.shine-gold{background-image:linear-gradient(100deg,#f59e0b 0%,#fbbf24 38%,#ffffff 50%,#fbbf24 62%,#f59e0b 100%)}
+.shine-gold-lt{background-image:linear-gradient(100deg,#fbbf24 0%,#fde68a 38%,#ffffff 50%,#fde68a 62%,#fbbf24 100%)}
+.hl-chip{padding:5px 12px;border-radius:10px;border:1px solid #8657ff59;box-shadow:inset 0 0 0 40px #8657ff26}
+@media(prefers-reduced-motion:reduce){.shine-gold,.shine-gold-lt{animation:none}}
+#projectGrid{grid-template-columns:1fr;max-width:640px;margin:0 auto}
+#projectGrid .card{animation:spinBorder 4s linear infinite,cardIn .4s ease}
+@keyframes cardIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.sentinel{text-align:center;color:var(--muted);padding:26px 0;font-size:13px;max-width:640px;margin:0 auto}
+#projectEmpty{max-width:640px;margin:0 auto}
+.avatar.sm{width:42px;height:42px;border-radius:50%;font-size:17px;flex:none}
+.convo{display:flex;align-items:center;gap:12px;padding:12px 4px;border-bottom:1px solid #28324d;cursor:pointer}
+.convo:last-child{border:0}
+.convo-t{flex:1;min-width:0}
+.ellipsis{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
+.time{font-size:11px}
+.chat-head{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid #28324d}
+.chat-body{display:flex;flex-direction:column;gap:8px;height:min(52vh,420px);overflow-y:auto;padding:14px 2px}
+.bubble{max-width:82%;padding:9px 12px;border-radius:14px;font-size:14px;line-height:1.4;word-break:break-word}
+.bubble span{display:block;font-size:10px;opacity:.7;margin-top:3px;text-align:right}
+.bubble.me{align-self:flex-end;background:linear-gradient(135deg,#8657ff,#6840d7);border-bottom-right-radius:4px}
+.bubble.them{align-self:flex-start;background:#1d2745;border-bottom-left-radius:4px}
+.chat-send{display:flex;gap:8px;margin-top:6px}
+.chat-send input{flex:1;min-width:0;padding:11px 13px;border-radius:12px;border:1px solid #394565;background:#0b1225;color:#fff;outline:none}
+
+/* ===== v-final2 tweaks ===== */
+.hero{padding:40px 0 0!important}
+.hero .lead{margin:0 0 6px}
+.hero .actions{margin-top:14px}
+.hero + .section{padding-top:0!important}
+.hl-chip{background-image:linear-gradient(100deg,#d9d2ff 0%,#d9d2ff 38%,#ffffff 50%,#d9d2ff 62%,#d9d2ff 100%)!important;background-size:250% 100%!important;
+  border:1px solid #a78bfa99!important;box-shadow:inset 0 0 0 40px #8657ff40,0 0 14px #8657ff66!important;font-weight:900}
+.shine-gold-lt{background-image:linear-gradient(100deg,#fcd34d 0%,#fef3c7 38%,#ffffff 50%,#fef3c7 62%,#fcd34d 100%)!important;background-size:250% 100%}
+.bold-p{font-weight:800!important;font-size:16px;color:#dfe5f5!important}
+
+/* ===== v-final3 ===== */
+/* Opportunities + Find Projects: right under the header line */
+#projects{padding-top:8px!important}
+#projects .eyebrow{margin:0}
+#projects .page-title{margin:4px 0 2px}
+/* Get work done: purple-to-cyan gradient with white running shine */
+.hero h1 span{
+  background-image:linear-gradient(100deg,transparent 0%,transparent 38%,#ffffff 50%,transparent 62%,transparent 100%),linear-gradient(90deg,#8b5cf6 0%,#6d8cf5 45%,#22d3ee 100%)!important;
+  background-size:250% 100%,100% 100%!important;
+  background-repeat:no-repeat!important;
+  animation:gwdShine 3s linear infinite!important}
+@keyframes gwdShine{from{background-position:150% 0,0 0}to{background-position:-50% 0,0 0}}
+@media(prefers-reduced-motion:reduce){.hero h1 span{animation:none!important}}
+
+/* ===== v-final4 ===== */
+.brand{display:inline-block;background-image:linear-gradient(100deg,transparent 0%,transparent 38%,#ffffff 50%,transparent 62%,transparent 100%),linear-gradient(90deg,#8b5cf6 0%,#6d8cf5 45%,#22d3ee 100%)!important;background-size:250% 100%,100% 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gwdShine 3s linear infinite}
+.brand .bt,.brand b{display:inline!important;background:none!important;animation:none!important;color:transparent;-webkit-text-fill-color:transparent}
+#home .section-head .shine-eyebrow{background-image:linear-gradient(100deg,transparent 0%,transparent 38%,#ffffff 50%,transparent 62%,transparent 100%),linear-gradient(90deg,#8b5cf6 0%,#6d8cf5 45%,#22d3ee 100%)!important;background-size:250% 100%,100% 100%!important;background-repeat:no-repeat!important;animation:gwdShine 3s linear infinite!important}
+@media(prefers-reduced-motion:reduce){.brand,#home .section-head .shine-eyebrow{animation:none!important}}
+/* Opportunities directly under header line */
+#projects{padding-top:2px!important;margin-top:0!important}
+#projects .eyebrow{margin-top:0!important}
+
+/* ===== v-final5 ===== */
+#projects .eyebrow.hl-chip{display:block!important;width:fit-content;background-image:linear-gradient(100deg,transparent 0%,transparent 38%,#ffffff 50%,transparent 62%,transparent 100%),linear-gradient(90deg,#8b5cf6 0%,#6d8cf5 45%,#22d3ee 100%)!important;background-size:250% 100%,100% 100%!important;background-repeat:no-repeat!important;animation:gwdShine 3s linear infinite!important}
+#projects .page-title{display:block!important;width:fit-content;margin-top:8px}
+@media(prefers-reduced-motion:reduce){#projects .eyebrow.hl-chip{animation:none!important}}
+
+/* ===== v-final6 ===== */
+#projects{padding-top:22px!important}
+
+/* ===== white running shine: Simple process + Apply buttons ===== */
+.eyebrow.shine-white{display:inline-block;background-image:linear-gradient(100deg,transparent 0%,transparent 38%,#ffffff 50%,transparent 62%,transparent 100%),linear-gradient(#bdaaff,#bdaaff);background-size:250% 100%,100% 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gwdShine 3s linear infinite}
+.btn.apply-shine{background-image:linear-gradient(100deg,transparent 0%,transparent 40%,rgba(255,255,255,.4) 50%,transparent 60%,transparent 100%),linear-gradient(135deg,#8657ff,#6840d7);background-size:250% 100%,100% 100%;background-repeat:no-repeat;animation:gwdShine 3.2s linear infinite}
+@media(prefers-reduced-motion:reduce){.eyebrow.shine-white,.btn.apply-shine{animation:none}}
+
+/* ===== scissor logo ===== */
+.brand-in{display:inline-flex;align-items:center;gap:9px}
+.scissor{flex:none;overflow:visible;filter:drop-shadow(0 0 6px #6d8cf566)}
+.sc-blade{transform-box:view-box;transform-origin:16px 16px;animation:scSnip 2.6s ease-in-out infinite}
+.sc-a{--d:-1}.sc-b{--d:1}
+@keyframes scSnip{0%,55%,100%{transform:rotate(0)}65%{transform:rotate(calc(var(--d)*9deg))}75%{transform:rotate(calc(var(--d)*-6deg))}85%{transform:rotate(calc(var(--d)*9deg))}92%{transform:rotate(0)}}
+.brand:hover .sc-blade{animation-duration:.9s}
+@media(prefers-reduced-motion:reduce){.sc-blade{animation:none}}
+
+/* ===== v-final7 ===== */
+#projectGrid .tag .tg{display:inline-block;font-weight:800;background-image:linear-gradient(100deg,transparent 0%,transparent 38%,#ffffff 50%,transparent 62%,transparent 100%),linear-gradient(90deg,#8b5cf6 0%,#6d8cf5 45%,#22d3ee 100%);background-size:250% 100%,100% 100%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gwdShine 3s linear infinite}
+@media(prefers-reduced-motion:reduce){#projectGrid .tag .tg{animation:none}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="#home" onclick="go('home')"><span class="brand-in"><svg class="scissor" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><defs><linearGradient id="scG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset=".5" stop-color="#6d8cf5"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><g class="sc-blade sc-a"><path d="M16 16 L29 5" stroke="url(#scG)" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M10.5 21.5 L16 16" stroke="url(#scG)" stroke-width="2.4" stroke-linecap="round"/><circle cx="7" cy="25" r="4.2" fill="none" stroke="url(#scG)" stroke-width="2.4"/></g><g class="sc-blade sc-b"><path d="M16 16 L29 27" stroke="url(#scG)" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M10.5 10.5 L16 16" stroke="url(#scG)" stroke-width="2.4" stroke-linecap="round"/><circle cx="7" cy="7" r="4.2" fill="none" stroke="url(#scG)" stroke-width="2.4"/></g><circle cx="16" cy="16" r="1.9" fill="#fff"/></svg><span class="brand-txt"><span class="bt">CUT</span> <b>CONNECT</b></span></span></a><nav class="navlinks"><a href="#services" onclick="go('services')">Services</a><a href="#creators" onclick="go('creators')">Find Creators</a><a href="#projects" onclick="go('projects')">Find Projects</a><a href="#how" onclick="go('how')">How it works</a></nav><div style="display:flex;gap:8px"><button class="btn ghost small" onclick="go('dashboard')">Dashboard</button></div></div></header>
+<main class="wrap">
+<section id="home" class="page active"><div class="welcome" id="welcomeText"></div><div class="hero"><div><div class="eyebrow">India's creative services marketplace</div><h1>Find talent.<br><span>Get work done.</span></h1><p class="lead">Connect with video editors, designers, writers and creative professionals. Find the right talent or discover your next project on Cut Connect.</p><div class="actions" id="heroActions"><button class="btn" onclick="openAuth('creator')">Editor</button><button class="btn secondary" onclick="openAuth('client')">Client</button></div></div></div>
+<div class="section"><div class="section-head"><div><div class="eyebrow shine-eyebrow">Explore services</div><h2>What do you want to create?</h2></div><p class="bold-p">Choose a service and connect with creative professionals.</p></div><div class="grid four" id="homeServices"></div></div>
+<div class="section" id="how"><div class="section-head"><div><div class="eyebrow shine-white">Simple process</div><h2>How Cut Connect works</h2></div><p>Start with a creator search or post a project and receive applications.</p></div><div class="grid"><article class="card step"><div class="stepnum">01</div><h3>Join the platform</h3><p>Create a client or creator profile and tell the community what you need or what you offer.</p></article><article class="card step"><div class="stepnum">02</div><h3>Connect on a project</h3><p>Search creators directly, or post a project so interested creators can apply.</p></article><article class="card step"><div class="stepnum">03</div><h3>Agree and collaborate</h3><p>Discuss scope, timeline and price, place an order, then review the delivered work.</p></article></div></div>
+<div class="cta"><div><div class="eyebrow shine-eyebrow">Your next project starts here</div><h2>Let's create something great.</h2><p>Join Cut Connect as a client or creative professional.</p></div></div></section>
+<section id="services" class="page"><div class="eyebrow">Marketplace</div><h1 class="page-title">Explore creative services</h1><p class="muted">Choose a category to see relevant creators and projects.</p><div class="grid four" id="serviceGrid"></div></section>
+<section id="creators" class="page"><div class="eyebrow">Hire creative talent</div><h1 class="page-title">Find Creators</h1><p class="muted">Search by skill, service or creator name.</p><div class="toolbar"><input class="search" id="creatorSearch" placeholder="Search video editor, designer, writer..." oninput="renderCreators()"><select class="search" id="creatorCategory" onchange="renderCreators()"><option value="All">All services</option></select></div><div class="grid" id="creatorGrid"></div></section>
+<section id="projects" class="page"><div class="eyebrow shine-eyebrow hl-chip">New Opportunities</div><h1 class="page-title shine-gold-lt">Find Projects</h1><p class="muted bold-p">Explore client projects and apply with your proposal.</p><div class="toolbar"><input class="search" id="projectSearch" placeholder="Search projects..." oninput="renderProjects()"><select class="search" id="projectCategory" onchange="renderProjects()"><option value="All">All services</option></select><button class="btn" id="postProjBtn" onclick="openProject()">Post a project</button></div><div class="grid" id="projectGrid"></div><div id="projectEmpty" class="empty" style="display:none">No projects found. Try another word or service.</div><div id="projectSentinel" class="sentinel" style="display:none"><button class="btn ghost small" onclick="loadMoreProjects()">Load more projects</button></div></section>
+<section id="profile" class="page"><button class="btn ghost small" onclick="go('creators')">← Back to creators</button><div id="profileContent" style="margin-top:18px"></div></section>
+<section id="dashboard" class="page"><div class="eyebrow shine-eyebrow">Your workspace</div><h1 class="page-title">Dashboard</h1><div class="dp-row"><div class="dp-big" id="dpBig"></div><div><div id="dpName" class="shine-gold" style="font-weight:800;font-size:17px"></div><div id="dpUser" class="muted" style="font-size:13px;margin-bottom:6px"></div><button class="btn ghost small" onclick="document.getElementById('dpFile').click()">Change profile photo</button><div class="muted" style="font-size:12px;margin-top:4px">This photo shows on the Account button below.</div></div><input type="file" id="dpFile" accept="image/*" class="hidden" onchange="setDP(this)"></div><div class="card-actions" style="margin:16px 0"><button class="btn ghost small" onclick="openEditProfile()">Edit profile</button><button class="btn ghost small" onclick="go('orders')">My orders</button><button class="btn ghost small" onclick="logout()">Log out</button></div><div id="dashContent"></div></section>
+<section id="messages" class="page"><div class="eyebrow shine-gold">Communication</div><h1 class="page-title">Messages</h1><div id="msgContent"></div></section>
+<section id="orders" class="page"><div class="eyebrow">Work management</div><h1 class="page-title">My Orders</h1><div id="ordersContent" class="panel"></div></section>
+<section id="about" class="page"><div class="eyebrow">About Cut Connect</div><h1 class="page-title">Creative work, connected.</h1><div class="panel"><p>Cut Connect is an India-focused creative services marketplace. Clients discover video editors, designers, writers and other creative professionals, or post a project and receive proposals. Creators showcase their skills and apply for work.</p><p class="muted">Cut Connect connects clients and creators. It does not process payments: agree on scope, price and payment directly with the other person.</p></div></section>
+<section id="help" class="page"><div class="eyebrow">Support</div><h1 class="page-title">Help & Feedback</h1><div class="panel"><p>Need help, want to share an idea, or found a problem? Tell us below.</p><label class="field">What is this about?<select id="helpTopic"><option>Help / Question</option><option>Feedback / Suggestion</option><option>Report a problem</option></select></label><label class="field">Your email (optional)<input id="helpEmail" maxlength="120" placeholder="you@example.com"></label><label class="field">Your message<textarea id="helpMsg" maxlength="2000" placeholder="Write your message"></textarea></label><button class="btn" onclick="sendHelp()">Send</button></div></section>
+<section id="terms" class="page terms"><div class="eyebrow">Legal</div><h1 class="page-title">Terms of Service</h1><div class="panel"><p class="muted">Last updated: November 2026</p>
+<h3>1. Who can use Cut Connect</h3><p>Cut Connect is only for people who are 18 years of age or older. By creating an account you confirm that your date of birth is correct and that you are at least 18.</p>
+<h3>2. Your account</h3><p>Keep your login details safe and give correct information. You are responsible for everything done through your account.</p>
+<h3>3. Clients and creators</h3><p>Clients can post projects and hire creators. Creators can showcase their work and apply for projects. Cut Connect helps people find each other; the agreement for any work is between the client and the creator.</p>
+<h3>4. Orders and payments</h3><p>Scope, delivery time and price should be agreed clearly before work starts. Cut Connect does not process payments. Agree on the price and payment method directly with the other person.</p>
+<h3>5. Your content</h3><p>You own the work and content you upload. You confirm you have the right to share it and that it does not copy someone else's work.</p>
+<h3>6. What is not allowed</h3><p>Fake profiles, fraud, harassment, illegal or adult content, spam, and misuse of other people's work are not allowed. Accounts that break these rules may be removed.</p>
+<h3>7. Privacy</h3><p>We ask for details such as name, date of birth and language only to set up your account and check the 18+ rule. Your date of birth, gender and language are stored privately and are not shown to other users.</p>
+<h3>8. Changes and contact</h3><p>We may update these terms from time to time. For questions, use Help & Feedback.</p>
+</div></section>
+</main><footer><div class="wrap footcol"><span><b style="color:white">CUT CONNECT</b> · One platform. Every creative skill.</span><div class="footlinks"><a href="#about" onclick="go('about')">About</a><a href="#help" onclick="go('help')">Help & Feedback</a><a href="#terms" onclick="go('terms')">Terms of Service</a></div><div class="dev">Developer: <b>Ansh Nishad</b></div><span>© 2026 Cut Connect</span></div></footer>
+<div class="modal" id="modal"><div class="dialog"><div class="dialog-head"><h2 id="modalTitle">Join Cut Connect</h2><button class="close" onclick="closeModal()">×</button></div><div id="modalBody"></div></div></div><div class="toast" id="toast"></div>
+<nav class="bottom-nav" id="bottomNav">
+<button class="bn-item active" data-t="home" onclick="bnGo('home')" aria-label="Home"><svg class="fillable" viewBox="0 0 24 24"><path d="M4 10.2 12 4l8 6.2V19a1.5 1.5 0 0 1-1.5 1.5H15v-5.3a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5.3H5.5A1.5 1.5 0 0 1 4 19z"/></svg></button>
+<button class="bn-item" data-t="reel" onclick="bnGo('reel')" aria-label="Reel"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4.5"/><path d="m10 9.2 5 2.8-5 2.8z"/></svg></button>
+<button class="bn-item" data-t="send" onclick="bnGo('send')" aria-label="Send"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4.5 8.5 7.5 5.5 7.5-5.5"/></svg></button>
+<button class="bn-item" data-t="search" onclick="bnGo('search')" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.9-4.9"/></svg></button>
+<button class="bn-item" data-t="account" onclick="bnGo('account')" aria-label="Account"><span class="bn-avatar" id="bnAvatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg></span></button>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* ===== Cut Connect — live version (Supabase backend) ===== */
+const SUPABASE_URL='https://uoxlcvebqsmsgevhsemt.supabase.co';
+const SUPABASE_KEY='sb_publishable_0A64jilkcb9Ri4u05isj0g_bojAZ_fW';
+const CONFIGURED=SUPABASE_URL.indexOf('PASTE_')!==0&&SUPABASE_KEY.indexOf('PASTE_')!==0;
+let sb=null;
+try{if(CONFIGURED&&window.supabase)sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY)}catch(e){console.error(e)}
+let me=null,openChat=null,msgs=[],rtChannel=null;
+const userCache={},creatorCache={},projCache={};
+const services=[['Video Editing','🎬','Reels, Shorts, YouTube videos'],['Graphic Design','🎨','Posters, banners, brand creatives'],['Thumbnail Design','🖼️','YouTube thumbnails and covers'],['Content Writing','✍️','Scripts, captions and blogs'],['Social Media Management','📱','Content planning and account support'],['Website Design','💻','Landing pages and business websites'],['Motion Graphics','✨','Animation and motion visuals'],['Digital Marketing','📈','Campaign creatives and promotion']];
+const bnMap={home:'home',reel:'projects',send:'messages',search:'creators',account:'dashboard'};
+const pageToTab={home:'home',projects:'reel',messages:'send',creators:'search',profile:'search',services:'search',dashboard:'account',orders:'account'};
+
+/* ---------- helpers ---------- */
+function esc(t){return String(t==null?'':t).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.style.display='block';clearTimeout(window.tt);window.tt=setTimeout(()=>t.style.display='none',3600)}
+function inr(n){return '₹'+Number(n||0).toLocaleString('en-IN')}
+function cleanQ(s){return String(s||'').replace(/[%,()*\\]/g,' ').trim().slice(0,60)}
+function initials(n){return String(n||'?').trim().split(/\s+/).slice(0,2).map(w=>w.charAt(0).toUpperCase()).join('')||'?'}
+function safeAvatar(a){return typeof a==='string'&&/^data:image\/jpeg;base64,[A-Za-z0-9+\/=]+$/.test(a)?a:null}
+function safeUrl(u){try{let x=new URL(u);return /^https?:$/.test(x.protocol)?x.href:null}catch(e){return null}}
+function avatarHTML(p,cls){let a=safeAvatar(p&&p.avatar);return `<div class="${cls||'avatar'}"${a?` style="background-image:url(${a});background-size:cover;background-position:center"`:''}>${a?'':esc(initials(p&&p.name))}</div>`}
+function debounce(fn,ms){let t;return function(){const a=arguments;clearTimeout(t);t=setTimeout(()=>fn.apply(null,a),ms)}}
+function dbErr(e,msg){console.error(e);toast(msg||'Something went wrong. Please try again.')}
+function fmtTime(ts){return new Date(ts).toLocaleTimeString('en-IN',{hour:'numeric',minute:'2-digit'})}
+function openModal(title,html){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=html;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal'&&!document.body.classList.contains('locked'))closeModal()});
+
+/* ---------- navigation ---------- */
+function bnSet(t){document.querySelectorAll('.bn-item').forEach(b=>b.classList.toggle('active',b.dataset.t===t))}
+function go(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById(id);if(el)el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(me){
+    if(id==='creators')loadCreators();
+    if(id==='projects')loadProjects();
+    if(id==='dashboard')renderDash();
+    if(id==='orders')renderOrders();
+    if(id==='messages')renderMessages();
+  }
+  if(pageToTab[id])bnSet(pageToTab[id]);
+}
+function bnGo(t){
+  if(t==='account'&&!me){openAuth();bnSet('account');return}
+  if(t==='send')openChat=null;
+  go(bnMap[t]);
+  if(t==='search'){setTimeout(()=>{let i=document.getElementById('creatorSearch');if(i)i.focus({preventScroll:true})},50)}
+  bnSet(t);
+}
+
+/* ---------- services ---------- */
+function serviceCard(s){return `<article class="card"><div class="iconbox">${s[1]}</div><h3>${s[0]}</h3><p>${s[2]}</p><button class="btn ghost small" onclick="filterService('${s[0]}')">Explore service</button></article>`}
+document.getElementById('homeServices').innerHTML=services.slice(0,4).map(serviceCard).join('');
+document.getElementById('serviceGrid').innerHTML=services.map(serviceCard).join('');
+['creatorCategory','projectCategory'].forEach(id=>{let e=document.getElementById(id);services.forEach(s=>e.insertAdjacentHTML('beforeend',`<option>${s[0]}</option>`))});
+function filterService(s){document.getElementById('creatorCategory').value=s;go('creators')}
+
+/* ---------- creators ---------- */
+let creatorTok=0;
+async function loadCreators(){
+  const grid=document.getElementById('creatorGrid'),tok=++creatorTok;
+  const q=cleanQ(document.getElementById('creatorSearch').value),cat=document.getElementById('creatorCategory').value;
+  let qb=sb.from('profiles').select('id,name,role,skill,bio,price,location,portfolio_url,avatar').eq('role','creator').not('skill','is',null).order('created_at',{ascending:false}).limit(60);
+  if(cat!=='All')qb=qb.eq('skill',cat);
+  if(q)qb=qb.or(`name.ilike.%${q}%,skill.ilike.%${q}%,bio.ilike.%${q}%`);
+  const {data,error}=await qb;
+  if(tok!==creatorTok)return;
+  if(error){dbErr(error,'Could not load creators.');return}
+  (data||[]).forEach(c=>{creatorCache[c.id]=c;userCache[c.id]=c});
+  grid.innerHTML=(data&&data.length)?data.map(c=>`<article class="card"><div class="profile-top">${avatarHTML(c)}<div><h3 style="margin:0">${esc(c.name)}</h3><span class="tag">${esc(c.skill)}</span></div></div><p>${c.location?`<span class="badge">${esc(c.location)}</span>`:''}</p><p>${esc(c.bio||'')}</p>${c.price?`<div class="price">Starting at ${inr(c.price)}</div>`:''}<div class="card-actions"><button class="btn small" onclick="viewProfile('${c.id}')">View profile</button>${c.id!==me.id?`<button class="btn ghost small" onclick="startChat('${c.id}')">Message</button>`:''}</div></article>`).join(''):'<div class="empty">No creators found yet. Creators appear here after adding their skill in Dashboard → Edit profile.</div>';
+}
+const renderCreators=debounce(loadCreators,280);
+async function viewProfile(id){
+  let c=creatorCache[id];
+  if(!c){const r=await sb.from('profiles').select('id,name,role,skill,bio,price,location,portfolio_url,avatar').eq('id',id).single();c=r.data;if(c){creatorCache[id]=c;userCache[id]=c}}
+  if(!c){toast('Profile not found.');return}
+  const url=safeUrl(c.portfolio_url);
+  let btns='';
+  if(c.id!==me.id){
+    if(me.role==='client'&&c.role==='creator')btns+=`<button class="btn" onclick="directOrder('${c.id}')">Order directly</button>`;
+    btns+=`<button class="btn ${btns?'secondary':''}" onclick="startChat('${c.id}')">${btns?'Chat first':'Message'}</button>`;
+  }
+  document.getElementById('profileContent').innerHTML=`<div class="panel"><div class="profile-top">${avatarHTML(c)}<div><h1 class="page-title">${esc(c.name)}</h1><p class="muted">${esc(c.skill||'')}${c.location?' · '+esc(c.location):''}</p></div></div>${c.bio?`<p>${esc(c.bio)}</p>`:''}${url?`<h3>Portfolio</h3><p><a href="${esc(url)}" target="_blank" rel="noopener noreferrer" style="color:#c5b6ff">${esc(url)}</a></p>`:''}${c.price?`<h3>Starting price</h3><div class="price">${inr(c.price)}</div>`:''}<div class="card-actions">${btns}</div></div>`;
+  go('profile');
+}
+
+/* ---------- projects ---------- */
+const PAGE=15;
+let pf={page:0,done:false,loading:false,q:'',cat:'All',tok:0};
+function projCard(p){
+  const mine=p.client_id===me.id;
+  const action=mine?'<span class="badge">Your project</span>':(me.role==='creator'?`<button class="btn small apply-shine" onclick="applyProject('${p.id}')">Apply for project</button>`:'');
+  return `<article class="card"><span class="tag"><span class="tg">${esc(p.cat)}</span></span><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p><div class="listrow"><span class="muted">Budget</span><strong>${esc(p.budget)}</strong></div><div class="listrow"><span class="muted">Client</span><strong>${esc((p.client&&p.client.name)||'Client')}</strong></div>${action}</article>`;
+}
+function loadProjects(){
+  pf={page:0,done:false,loading:false,q:cleanQ(document.getElementById('projectSearch').value),cat:document.getElementById('projectCategory').value,tok:pf.tok+1};
+  document.getElementById('projectGrid').innerHTML='';
+  loadMoreProjects();
+}
+const renderProjects=debounce(loadProjects,280);
+async function loadMoreProjects(){
+  if(pf.loading||pf.done||!sb)return;
+  pf.loading=true;const tok=pf.tok;
+  let qb=sb.from('projects').select('id,title,cat,budget,description,client_id,created_at,client:profiles(name)').order('created_at',{ascending:false}).range(pf.page*PAGE,pf.page*PAGE+PAGE-1);
+  if(pf.cat!=='All')qb=qb.eq('cat',pf.cat);
+  if(pf.q)qb=qb.or(`title.ilike.%${pf.q}%,description.ilike.%${pf.q}%`);
+  const {data,error}=await qb;
+  if(tok!==pf.tok)return;
+  pf.loading=false;
+  if(error){dbErr(error,'Could not load projects.');return}
+  const rows=data||[];
+  rows.forEach(p=>projCache[p.id]=p);
+  const g=document.getElementById('projectGrid');
+  g.insertAdjacentHTML('beforeend',rows.map(projCard).join(''));
+  pf.page++;if(rows.length<PAGE)pf.done=true;
+  const has=g.children.length>0;
+  document.getElementById('projectEmpty').style.display=has?'none':'block';
+  document.getElementById('projectSentinel').style.display=(has&&!pf.done)?'block':'none';
+}
+function openProject(){
+  if(me.role!=='client'){toast('Only client accounts can post projects.');return}
+  openModal('Post a project',`<form onsubmit="postProject(event)"><label class="field">Project title<input id="pTitle" required minlength="3" maxlength="120" placeholder="e.g. Edit 3 Instagram reels"></label><label class="field">Service category<select id="pCat">${services.map(s=>`<option>${s[0]}</option>`).join('')}</select></label><label class="field">Budget<input id="pBudget" required maxlength="40" placeholder="e.g. ₹1,000–₹2,000"></label><label class="field">Project details<textarea id="pDesc" required maxlength="1500" placeholder="Describe deliverables, deadline and requirements"></textarea></label><button class="btn" style="width:100%">Publish project</button></form>`);
+}
+async function postProject(e){
+  e.preventDefault();const btn=e.target.querySelector('button');btn.disabled=true;
+  const {error}=await sb.from('projects').insert({client_id:me.id,title:document.getElementById('pTitle').value.trim(),cat:document.getElementById('pCat').value,budget:document.getElementById('pBudget').value.trim(),description:document.getElementById('pDesc').value.trim()});
+  if(error){btn.disabled=false;dbErr(error,'Could not publish the project.');return}
+  closeModal();toast('Your project is published.');go('projects');
+}
+function applyProject(id){
+  const p=projCache[id];if(!p)return;
+  openModal('Apply for project',`<form onsubmit="submitApply(event,'${id}')"><p><b>${esc(p.title)}</b></p><label class="field">Your proposal<textarea id="proposal" required maxlength="1500" placeholder="Explain how you would complete this project"></textarea></label><label class="field">Your quoted price<input id="quote" required maxlength="40" placeholder="e.g. ₹1,200"></label><button class="btn" style="width:100%">Send application</button></form>`);
+}
+async function submitApply(e,id){
+  e.preventDefault();const p=projCache[id];const btn=e.target.querySelector('button');btn.disabled=true;
+  const pr=document.getElementById('proposal').value.trim(),qt=document.getElementById('quote').value.trim();
+  const {error}=await sb.from('applications').insert({project_id:id,creator_id:me.id,proposal:pr,quote:qt});
+  if(error){btn.disabled=false;if(error.code==='23505')toast('You have already applied to this project.');else dbErr(error,'Could not send your application.');return}
+  await sb.from('messages').insert({sender_id:me.id,receiver_id:p.client_id,body:('Applied for "'+p.title+'" — '+pr+' (Quote: '+qt+')').slice(0,2000)});
+  closeModal();toast('Application sent. You can follow up in Messages.');
+}
+
+/* ---------- orders ---------- */
+const ST={requested:'Awaiting creator',accepted:'In progress',delivered:'Delivered',completed:'Completed',cancelled:'Cancelled'};
+function directOrder(id){
+  const c=creatorCache[id];if(!c)return;
+  openModal('Place an order',`<form onsubmit="confirmOrder(event,'${id}')"><p>Creator: <b>${esc(c.name)}</b></p><p>Service: ${esc(c.skill)}</p>${c.price?`<p class="price">Starting price: ${inr(c.price)}</p>`:''}<label class="field">Project requirements<textarea id="orderBrief" required maxlength="1500" placeholder="Describe what you need"></textarea></label><label class="field">Offered amount (₹)<input id="orderAmount" type="number" min="1" max="10000000" step="1" value="${c.price||''}" required></label><button class="btn" style="width:100%">Send order request</button><div class="notice">Cut Connect does not process payments. Agree on the payment method directly with the creator.</div></form>`);
+}
+async function confirmOrder(e,id){
+  e.preventDefault();const c=creatorCache[id];const btn=e.target.querySelector('button');btn.disabled=true;
+  const brief=document.getElementById('orderBrief').value.trim(),amount=parseInt(document.getElementById('orderAmount').value,10);
+  if(!(amount>=1)){btn.disabled=false;toast('Enter a valid amount.');return}
+  const {error}=await sb.from('orders').insert({client_id:me.id,creator_id:id,title:c.skill+' by '+c.name,brief,amount});
+  if(error){btn.disabled=false;dbErr(error,'Could not create the order.');return}
+  await sb.from('messages').insert({sender_id:me.id,receiver_id:id,body:('New order request ('+c.skill+', '+inr(amount)+'): '+brief).slice(0,2000)});
+  closeModal();toast('Order request sent.');go('orders');
+}
+function orderActions(o){
+  const isC=o.creator_id===me.id,isCl=o.client_id===me.id,a=[];
+  if(isC&&o.status==='requested'){a.push(['accepted','Accept','btn small']);a.push(['cancelled','Decline','btn ghost small'])}
+  if(isC&&o.status==='accepted')a.push(['delivered','Mark delivered','btn small']);
+  if(isCl&&o.status==='requested')a.push(['cancelled','Cancel','btn ghost small']);
+  if(isCl&&o.status==='delivered')a.push(['completed','Mark completed','btn small']);
+  return a.map(x=>`<button class="${x[2]}" onclick="setOrderStatus('${o.id}','${x[0]}')">${x[1]}</button>`).join('');
+}
+async function setOrderStatus(id,status){
+  const {error}=await sb.from('orders').update({status}).eq('id',id);
+  if(error){dbErr(error,'Could not update the order.');return}
+  renderOrders();
+}
+async function renderOrders(){
+  const el=document.getElementById('ordersContent');el.innerHTML='<div class="empty">Loading…</div>';
+  const {data,error}=await sb.from('orders').select('id,client_id,creator_id,title,brief,amount,status,created_at').order('created_at',{ascending:false});
+  if(error){dbErr(error,'Could not load orders.');return}
+  const ids=[...new Set((data||[]).map(o=>o.client_id===me.id?o.creator_id:o.client_id))].filter(i=>!userCache[i]);
+  if(ids.length){const r=await sb.from('profiles').select('id,name,role,avatar').in('id',ids);(r.data||[]).forEach(p=>userCache[p.id]=p)}
+  const note='<div class="notice" style="margin:0 0 12px">Cut Connect does not process payments. Agree on payment directly with the other person.</div>';
+  el.innerHTML=note+((data&&data.length)?data.map(o=>{const other=userCache[o.client_id===me.id?o.creator_id:o.client_id]||{};return `<div class="listrow"><div><b>${esc(o.title)}</b><div class="muted">${o.client_id===me.id?'Creator':'Client'}: ${esc(other.name||'User')} · ${ST[o.status]||esc(o.status)}</div><div class="muted" style="font-size:12px">${esc(o.brief)}</div><div class="card-actions">${orderActions(o)}</div></div><strong>${inr(o.amount)}</strong></div>`}).join(''):'<div class="empty">No orders yet. Visit Find Creators to place an order.</div>');
+}
+
+/* ---------- messages ---------- */
+async function ensureUser(id){
+  if(userCache[id])return userCache[id];
+  const r=await sb.from('profiles').select('id,name,role,avatar').eq('id',id).single();
+  if(r.data)userCache[id]=r.data;return r.data;
+}
+async function loadMsgs(){
+  const {data,error}=await sb.from('messages').select('id,sender_id,receiver_id,body,created_at').order('created_at',{ascending:false}).limit(1000);
+  if(error){dbErr(error,'Could not load messages.');return}
+  msgs=(data||[]).reverse();
+  const ids=[...new Set(msgs.map(m=>m.sender_id===me.id?m.receiver_id:m.sender_id))].filter(i=>!userCache[i]);
+  if(ids.length){const r=await sb.from('profiles').select('id,name,role,avatar').in('id',ids);(r.data||[]).forEach(p=>userCache[p.id]=p)}
+}
+async function renderMessages(){document.getElementById('msgContent').innerHTML='<div class="panel"><div class="empty">Loading…</div></div>';await loadMsgs();drawMessages()}
+async function startChat(id){if(id===me.id)return;await ensureUser(id);openChat=id;go('messages')}
+function openConvo(id){openChat=id;drawMessages()}
+function closeChat(){openChat=null;drawMessages()}
+function convoList(){
+  const m=new Map();msgs.forEach(x=>m.set(x.sender_id===me.id?x.receiver_id:x.sender_id,x));
+  return [...m.entries()].map(e=>({id:e[0],last:e[1]})).sort((a,b)=>new Date(b.last.created_at)-new Date(a.last.created_at));
+}
+function drawMessages(){
+  const el=document.getElementById('msgContent');if(!el)return;
+  if(openChat){
+    const u=userCache[openChat]||{name:'User',role:''};
+    const th=msgs.filter(m=>m.sender_id===openChat||m.receiver_id===openChat);
+    el.innerHTML=`<div class="panel"><div class="chat-head"><button class="btn ghost small" onclick="closeChat()">← Back</button>${avatarHTML(u,'avatar sm')}<div><b>${esc(u.name)}</b><div class="muted" style="font-size:12px">${esc(u.role==='creator'?'Creator':u.role==='client'?'Client':'')}</div></div></div><div class="chat-body" id="chatBody">${th.length?th.map(m=>`<div class="bubble ${m.sender_id===me.id?'me':'them'}">${esc(m.body)}<span>${fmtTime(m.created_at)}</span></div>`).join(''):'<div class="empty">No messages yet. Say hello!</div>'}</div><form class="chat-send" onsubmit="sendMsg(event)"><input id="chatInput" maxlength="2000" placeholder="Write a message..." autocomplete="off" required><button class="btn small">Send</button></form></div>`;
+    const b=document.getElementById('chatBody');b.scrollTop=b.scrollHeight;
+  }else{
+    const list=convoList();
+    el.innerHTML=list.length?`<div class="panel">${list.map(c=>{const u=userCache[c.id]||{name:'User',role:''};return `<div class="convo" onclick="openConvo('${c.id}')">${avatarHTML(u,'avatar sm')}<div class="convo-t"><b>${esc(u.name)}</b> <span class="badge">${esc(u.role==='creator'?'Creator':u.role==='client'?'Client':'')}</span><div class="muted ellipsis">${esc(c.last.body)}</div></div><div class="muted time">${fmtTime(c.last.created_at)}</div></div>`}).join('')}</div>`:'<div class="panel"><div class="empty">No conversations yet. Message a creator or client, or apply to a project, and your chats will appear here.</div></div>';
+  }
+}
+async function sendMsg(e){
+  e.preventDefault();const i=document.getElementById('chatInput'),t=i.value.trim();if(!t)return;i.disabled=true;
+  const {data,error}=await sb.from('messages').insert({sender_id:me.id,receiver_id:openChat,body:t.slice(0,2000)}).select().single();
+  if(error){i.disabled=false;dbErr(error,'Message not sent.');return}
+  msgs.push(data);drawMessages();const n=document.getElementById('chatInput');if(n)n.focus();
+}
+function subscribeRT(){
+  if(rtChannel||!sb)return;
+  rtChannel=sb.channel('msgs-'+me.id).on('postgres_changes',{event:'INSERT',schema:'public',table:'messages',filter:'receiver_id=eq.'+me.id},async p=>{
+    const m=p.new;if(msgs.some(x=>x.id===m.id))return;
+    msgs.push(m);await ensureUser(m.sender_id);
+    if(document.getElementById('messages').classList.contains('active'))drawMessages();
+    else toast('New message from '+((userCache[m.sender_id]||{}).name||'someone'));
+  }).subscribe();
+}
+
+/* ---------- dashboard & profile ---------- */
+async function cnt(t,col,val){let q=sb.from(t).select('id',{count:'exact',head:true});if(col)q=q.eq(col,val);const r=await q;return r.count||0}
+async function renderDash(){
+  if(!me)return;const c=document.getElementById('dashContent');
+  c.innerHTML='<div class="empty">Loading…</div>';
+  const oc=await cnt('orders');
+  let html='';
+  if(me.role==='client'){
+    const pc=await cnt('projects','client_id',me.id);
+    html=`<div class="grid three"><div class="card"><span class="muted">My projects</span><h2>${pc}</h2></div><div class="card"><span class="muted">My orders</span><h2>${oc}</h2></div></div><div class="grid two" style="margin-top:16px"><div class="card"><h3>Find creative talent</h3><p>Search creator profiles and portfolios.</p><button class="btn" onclick="go('creators')">Find creators</button></div><div class="card"><h3>Post a project</h3><p>Receive proposals from interested creators.</p><button class="btn secondary" onclick="openProject()">Post a project</button></div></div>`;
+  }else{
+    const open=await cnt('projects'),apps=await cnt('applications','creator_id',me.id);
+    html=(me.skill?'':'<div class="notice" style="margin:0 0 14px">Add your skill, price and a short bio so clients can find you in Find Creators.</div>')+`<div class="grid three"><div class="card"><span class="muted">Open projects</span><h2>${open}</h2></div><div class="card"><span class="muted">My applications</span><h2>${apps}</h2></div><div class="card"><span class="muted">My orders</span><h2>${oc}</h2></div></div><div class="grid two" style="margin-top:16px"><div class="card"><h3>Find projects</h3><p>Browse client briefs and send proposals.</p><button class="btn" onclick="go('projects')">Explore projects</button></div><div class="card"><h3>My creator profile</h3><p>Skills, bio, portfolio link and starting price.</p><button class="btn secondary" onclick="openEditProfile()">Edit profile</button></div></div>`;
+  }
+  c.innerHTML=html;
+}
+function openEditProfile(){
+  const cr=me.role==='creator';
+  openModal('Edit profile',`<form onsubmit="saveProfile(event)"><label class="field">Name<input id="epName" required minlength="2" maxlength="60" value="${esc(me.name)}"></label><label class="field">City / location<input id="epLoc" maxlength="60" value="${esc(me.location||'')}" placeholder="e.g. Lucknow"></label>${cr?`<label class="field">Main skill<select id="epSkill"><option value="">Select a skill</option>${services.map(s=>`<option${me.skill===s[0]?' selected':''}>${s[0]}</option>`).join('')}</select></label><label class="field">Starting price (₹)<input id="epPrice" type="number" min="0" max="10000000" step="1" value="${me.price||''}"></label><label class="field">About your work<textarea id="epBio" maxlength="500" placeholder="Tell clients what you do and your experience">${esc(me.bio||'')}</textarea></label><label class="field">Portfolio link (optional)<input id="epUrl" maxlength="300" value="${esc(me.portfolio_url||'')}" placeholder="https://..."></label>`:''}<button class="btn" style="width:100%">Save profile</button></form>`);
+}
+async function saveProfile(e){
+  e.preventDefault();const btn=e.target.querySelector('button');
+  const g=id=>{let x=document.getElementById(id);return x?x.value.trim():null};
+  const upd={name:g('epName'),location:g('epLoc')||null};
+  if(me.role==='creator'){
+    upd.skill=g('epSkill')||null;upd.bio=g('epBio')||null;
+    const pr=g('epPrice');upd.price=pr?parseInt(pr,10):null;
+    const u=g('epUrl');if(u){const s=safeUrl(u);if(!s){toast('Portfolio link must start with http:// or https://');return}upd.portfolio_url=s}else upd.portfolio_url=null;
+  }
+  btn.disabled=true;
+  const {error}=await sb.from('profiles').update(upd).eq('id',me.id);
+  if(error){btn.disabled=false;dbErr(error,'Could not save your profile.');return}
+  Object.assign(me,upd);userCache[me.id]=me;delete creatorCache[me.id];
+  document.getElementById('welcomeText').textContent='Welcome '+me.name;document.getElementById('dpName').textContent=me.name;
+  closeModal();toast('Profile saved.');renderDash();paintDP();
+}
+function paintDP(){
+  const av=document.getElementById('bnAvatar'),big=document.getElementById('dpBig'),a=me&&safeAvatar(me.avatar);
+  if(a){av.style.backgroundImage='url('+a+')';av.innerHTML='';big.style.backgroundImage='url('+a+')';big.textContent=''}
+  else{av.style.backgroundImage='none';av.innerHTML='<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg>';big.style.backgroundImage='none';big.textContent=me?initials(me.name):'👤'}
+}
+function setDP(inp){
+  const file=inp.files&&inp.files[0];if(!file||!me)return;
+  const r=new FileReader();
+  r.onload=ev=>{const img=new Image();img.onload=async()=>{
+    const c=document.createElement('canvas'),S=240,m=Math.min(img.width,img.height);c.width=c.height=S;
+    c.getContext('2d').drawImage(img,(img.width-m)/2,(img.height-m)/2,m,m,0,0,S,S);
+    const url=c.toDataURL('image/jpeg',.85);
+    const {error}=await sb.from('profiles').update({avatar:url}).eq('id',me.id);
+    if(error){dbErr(error,'Could not save your photo.');return}
+    me.avatar=url;userCache[me.id]=me;delete creatorCache[me.id];paintDP();toast('Profile photo updated.');
+  };img.onerror=()=>toast('That file is not a valid image.');img.src=ev.target.result};
+  r.readAsDataURL(file);inp.value='';
+}
+async function logout(){try{await sb.auth.signOut()}catch(e){}location.reload()}
+
+/* ---------- help & feedback ---------- */
+async function sendHelp(){
+  const topic=document.getElementById('helpTopic').value,email=document.getElementById('helpEmail').value.trim(),message=document.getElementById('helpMsg').value.trim();
+  if(message.length<5){toast('Please write your message.');return}
+  const {error}=await sb.from('feedback').insert({user_id:me.id,topic,email:email||null,message:message.slice(0,2000)});
+  if(error){dbErr(error,'Could not send your message.');return}
+  document.getElementById('helpMsg').value='';toast('Thank you! Your message has been sent.');
+}
+
+/* ---------- login / sign up ---------- */
+const LANG_TOP=['English','Hindi','Hinglish'];
+const LANG_ALL=["Abkhaz", "Acehnese", "Afar", "Afrikaans", "Akan", "Albanian", "Amharic", "Arabic", "Armenian", "Assamese", "Awadhi", "Aymara", "Azerbaijani", "Balinese", "Bambara", "Bashkir", "Basque", "Belarusian", "Bemba", "Bengali", "Bhojpuri", "Bodo", "Bosnian", "Breton", "Bulgarian", "Burmese", "Cantonese", "Catalan", "Cebuano", "Chamorro", "Chechen", "Cherokee", "Chhattisgarhi", "Chichewa", "Chinese (Mandarin)", "Chinese (Traditional)", "Chuvash", "Corsican", "Croatian", "Czech", "Danish", "Dari", "Dhivehi", "Dinka", "Dogri", "Dutch", "Dyula", "Dzongkha", "Esperanto", "Estonian", "Ewe", "Faroese", "Fijian", "Filipino (Tagalog)", "Finnish", "French", "Frisian", "Fula", "Galician", "Ganda (Luganda)", "Garhwali", "Georgian", "German", "Greek", "Guarani", "Gujarati", "Haitian Creole", "Hakka", "Haryanvi", "Hausa", "Hawaiian", "Hebrew", "Hiligaynon", "Hmong", "Hungarian", "Icelandic", "Igbo", "Ilocano", "Indonesian", "Inuktitut", "Irish", "Italian", "Japanese", "Javanese", "Kachchhi", "Kannada", "Kashmiri", "Kazakh", "Khmer", "Kikuyu", "Kinyarwanda", "Kongo", "Konkani", "Korean", "Krio", "Kumaoni", "Kurdish (Kurmanji)", "Kurdish (Sorani)", "Kyrgyz", "Lambadi", "Lao", "Latin", "Latvian", "Lingala", "Lithuanian", "Luxembourgish", "Macedonian", "Madurese", "Magahi", "Maithili", "Malagasy", "Malay", "Malayalam", "Maltese", "Manipuri (Meitei)", "Maori", "Marathi", "Marwari", "Mizo", "Mongolian", "Nagpuri", "Navajo", "Nepali", "Norwegian", "Occitan", "Odia (Oriya)", "Oromo", "Pashto", "Persian (Farsi)", "Polish", "Portuguese", "Punjabi", "Quechua", "Rajasthani", "Romanian", "Romansh", "Russian", "Samoan", "Sanskrit", "Santali", "Scots Gaelic", "Sepedi", "Serbian", "Sesotho", "Shona", "Sindhi", "Sinhala", "Slovak", "Slovenian", "Somali", "Spanish", "Sundanese", "Swahili", "Swedish", "Tajik", "Tamil", "Tatar", "Telugu", "Thai", "Tibetan", "Tigrinya", "Tongan", "Tswana", "Tulu", "Turkish", "Turkmen", "Ukrainian", "Urdu", "Uyghur", "Uzbek", "Vietnamese", "Welsh", "Wolof", "Xhosa", "Yiddish", "Yoruba", "Zulu"];
+function langOptionsHTML(){return LANG_TOP.map(l=>`<option>${l}</option>`).join('')+'<option disabled>──────────</option>'+LANG_ALL.map(l=>`<option>${l}</option>`).join('')+'<option value="__other">Other (type your language)</option>'}
+function langOther(sel){let o=document.getElementById('authLangOther');o.style.display=sel.value==='__other'?'block':'none';o.required=sel.value==='__other'}
+function calcAge(d){let p=d.split('-').map(Number);if(p.length!==3||p[0]<1900)return NaN;let b=new Date(p[0],p[1]-1,p[2]),t=new Date();let a=t.getFullYear()-b.getFullYear(),m=t.getMonth()-b.getMonth();if(m<0||(m===0&&t.getDate()<b.getDate()))a--;return a}
+function authErr(msg){let e=document.getElementById('authErr');if(!e)return;if(!msg){e.style.display='none';return}e.textContent=msg;e.style.display='block'}
+function authOk(msg){let e=document.getElementById('authOk');if(e){e.textContent=msg;e.style.display='block'}}
+function authTabs(mode){return `<div class="tabs" style="margin-top:6px"><button type="button" class="tab ${mode==='signup'?'active':''}" onclick="openAuth(currentRole,'signup')">Sign up</button><button type="button" class="tab ${mode==='login'?'active':''}" onclick="openAuth(currentRole,'login')">Log in</button></div>`}
+let currentRole='creator';
+function openAuth(role,mode){
+  if(role)currentRole=role;
+  if(!mode){let seen=false;try{seen=!!localStorage.getItem('cc_seen')}catch(e){}mode=seen?'login':'signup'}
+  const msgs2=`<div class="notice err" id="authErr" style="display:none"></div><div class="notice" id="authOk" style="display:none;color:#b7f5cc;background:#12301f;border-color:#286443"></div>`;
+  const off=sb?'':`<div class="notice err">The site is not connected to its database yet. Add the Supabase URL and key in the page settings.</div>`;
+  let html;
+  if(mode==='login'){
+    html=`${authTabs(mode)}${off}<form onsubmit="loginSubmit(event)"><label class="field">Email<input id="authEmail" required inputmode="email" autocapitalize="none" autocomplete="email" placeholder="you@example.com"></label><label class="field">Password<input type="password" id="authPw" required autocomplete="current-password" placeholder="Your password"></label>${msgs2}<button class="btn" style="width:100%;margin-top:12px">Log in</button><div class="dev-entry"><a href="#" onclick="forgotPw();return false">Forgot password?</a></div></form>`;
+  }else{
+    const today=new Date().toISOString().slice(0,10);
+    html=`${authTabs(mode)}${off}<form onsubmit="authSubmit(event)"><label class="field">I am<select id="authRole"><option value="creator" ${currentRole!=='client'?'selected':''}>Editor</option><option value="client" ${currentRole==='client'?'selected':''}>Client</option></select></label><label class="field">Name<input id="authName" required minlength="2" maxlength="60" placeholder="Enter your name"></label><label class="field">Username<input id="authUser" required minlength="3" maxlength="20" pattern="[A-Za-z0-9_.]{3,20}" title="3-20 characters: letters, numbers, _ or ." autocapitalize="none" autocomplete="off" placeholder="Choose a username"></label><label class="field">Email<input id="authEmail" required inputmode="email" autocapitalize="none" autocomplete="email" placeholder="you@example.com"></label><label class="field">Password<input type="password" id="authPw" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label><label class="field">Date of birth (only 18+ allowed)<input type="date" id="authDob" required min="1900-01-01" max="${today}"></label><label class="field">Gender<select id="authGender" required><option value="" disabled selected>Select gender</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></label><label class="field">Language<select id="authLang" onchange="langOther(this)">${langOptionsHTML()}</select><input id="authLangOther" style="display:none" placeholder="Type your language"></label><label class="check"><input type="checkbox" id="authAgree" required><span>I am 18 years or older and I agree to the Terms of Service.</span></label><details class="terms-mini"><summary>Read Terms of Service</summary><p>You must be 18 or older. Give correct details. No fake profiles, fraud, harassment or illegal content. Agree scope and price before work starts. The full Terms are in the footer after you log in.</p></details>${msgs2}<button class="btn" style="width:100%;margin-top:12px">Create account</button></form>`;
+  }
+  openModal(mode==='login'?'Log in':'Join Cut Connect',html);decorateEyes();
+}
+async function authSubmit(e){
+  e.preventDefault();authErr('');
+  if(!sb){authErr('The site is not connected yet.');return}
+  const g=id=>document.getElementById(id).value;
+  const age=calcAge(g('authDob'));
+  if(isNaN(age)||age<0||age>120){authErr('Please enter a valid date of birth.');return}
+  if(age<18){authErr('Sorry, Cut Connect can only be used by people aged 18 years or older.');return}
+  let lang=g('authLang');
+  if(lang==='__other'){lang=document.getElementById('authLangOther').value.trim();if(!lang){authErr('Please type your language.');return}}
+  const name=g('authName').trim(),un=g('authUser').trim(),email=g('authEmail').trim().toLowerCase(),pw=g('authPw'),gender=g('authGender'),role=g('authRole');
+  if(name.length<2){authErr('Please enter your name.');return}
+  if(!/^[A-Za-z0-9_.]{3,20}$/.test(un)){authErr('Username must be 3-20 characters: letters, numbers, _ or .');return}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){authErr('Please enter a valid email address.');return}
+  if(pw.length<8){authErr('Password must be at least 8 characters.');return}
+  if(!gender){authErr('Please select your gender.');return}
+  const btn=e.target.querySelector('button.btn');btn.disabled=true;
+  try{
+    const ua=await sb.rpc('username_available',{u:un});
+    if(ua.error)throw ua.error;
+    if(!ua.data){authErr('This username is already taken.');btn.disabled=false;return}
+    const {data,error}=await sb.auth.signUp({email,password:pw,options:{data:{name,username:un,role,dob:g('authDob'),gender,language:lang},emailRedirectTo:location.origin+location.pathname}});
+    if(error)throw error;
+    if(data.user&&data.user.identities&&data.user.identities.length===0){authErr('This email is already registered. Please log in.');btn.disabled=false;return}
+    if(data.session){await startSession();return}
+    authOk('Account created! Check your email and click the confirmation link, then log in.');btn.disabled=false;
+  }catch(err){console.error(err);authErr(/rate|limit/i.test(err.message||'')?'Too many attempts. Please wait a little and try again.':'Could not create your account. Please try again.');btn.disabled=false}
+}
+async function loginSubmit(e){
+  e.preventDefault();authErr('');
+  if(!sb){authErr('The site is not connected yet.');return}
+  const btn=e.target.querySelector('button.btn');btn.disabled=true;
+  const {error}=await sb.auth.signInWithPassword({email:document.getElementById('authEmail').value.trim().toLowerCase(),password:document.getElementById('authPw').value});
+  if(error){authErr(/confirm/i.test(error.message)?'Please confirm your email first. Check your inbox.':'Wrong email or password.');btn.disabled=false;return}
+  const ok=await startSession();if(!ok){authErr('Could not load your account. Please try again.');btn.disabled=false}
+}
+async function forgotPw(){
+  authErr('');const em=(document.getElementById('authEmail').value||'').trim();
+  if(!em){authErr('Type your email above first.');return}
+  const {error}=await sb.auth.resetPasswordForEmail(em,{redirectTo:location.origin+location.pathname});
+  if(error){authErr('Could not send the reset email. Please try again later.');return}
+  authOk('If this email has an account, a password reset link is on its way.');
+}
+function openNewPass(){
+  openModal('Set a new password',`<form onsubmit="newPassSubmit(event)"><label class="field">New password<input type="password" id="authPw" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label><div class="notice err" id="authErr" style="display:none"></div><button class="btn" style="width:100%;margin-top:12px">Save password</button></form>`);decorateEyes();
+}
+async function newPassSubmit(e){
+  e.preventDefault();authErr('');
+  const {error}=await sb.auth.updateUser({password:document.getElementById('authPw').value});
+  if(error){authErr('Could not update the password. Use at least 8 characters.');return}
+  closeModal();toast('Password updated.');
+}
+/* Eye buttons on login fields */
+const EYE_ON='<svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+const EYE_OFF='<svg viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.7 10.7 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.2 4.2M6.6 6.6A16.6 16.6 0 0 0 2 12s3.6 7 10 7a10 10 0 0 0 4.6-1.1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>';
+function peekText(el){
+  if(el.tagName==='SELECT'){let o=el.options[el.selectedIndex];return 'Selected: '+((!el.value||el.value==='')?'not selected yet':o.text)}
+  if(!el.value)return 'Selected: not selected yet';
+  let p=el.value.split('-').map(Number);
+  return 'Selected: '+new Date(p[0],p[1]-1,p[2]).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
+}
+function decorateEyes(){
+  document.querySelectorAll('#modalBody .field>input,#modalBody .field>select').forEach(el=>{
+    if(el.id==='authLangOther'||el.closest('.eye-wrap'))return;
+    let isSel=el.tagName==='SELECT'||el.type==='date';
+    let w=document.createElement('span');w.className='eye-wrap'+(isSel?' sel':'');
+    el.parentNode.insertBefore(w,el);w.appendChild(el);
+    let b=document.createElement('button');b.type='button';b.className='eye-btn';b.setAttribute('aria-label','Show or hide');w.appendChild(b);
+    if(isSel){
+      let peek=document.createElement('div');peek.className='peek';w.after(peek);b.innerHTML=EYE_ON;
+      b.onclick=()=>{let open=peek.style.display==='block';peek.style.display=open?'none':'block';peek.textContent=peekText(el);b.innerHTML=open?EYE_ON:EYE_OFF};
+      el.addEventListener('change',()=>{if(peek.style.display==='block')peek.textContent=peekText(el)});
+    }else{
+      let hidden=el.type==='password';
+      const paint=()=>{b.innerHTML=hidden?EYE_ON:EYE_OFF;el.type=hidden?'password':'text'};
+      paint();b.onclick=()=>{hidden=!hidden;paint()};
+    }
+  });
+}
+
+
+/* ---------- session ---------- */
+async function startSession(){
+  const u=await sb.auth.getUser();
+  if(!u.data||!u.data.user)return false;
+  const r=await sb.from('profiles').select('id,name,username,role,skill,bio,price,location,portfolio_url,avatar').eq('id',u.data.user.id).single();
+  if(r.error||!r.data){await sb.auth.signOut();return false}
+  me=r.data;userCache[me.id]=me;
+  try{localStorage.setItem('cc_seen','1')}catch(e){}
+  afterLogin();return true;
+}
+function afterLogin(){
+  document.getElementById('welcomeText').textContent='Welcome '+me.name;
+  document.getElementById('heroActions').style.display='none';
+  document.getElementById('dpName').textContent=me.name;document.getElementById('dpUser').textContent='@'+me.username;
+  document.getElementById('postProjBtn').style.display=me.role==='client'?'':'none';
+  document.body.classList.remove('locked');document.getElementById('modal').classList.remove('lock');
+  closeModal();paintDP();subscribeRT();go('home');
+}
+(async function init(){
+  document.body.classList.add('locked');
+  const lock=()=>{openAuth();document.getElementById('modal').classList.add('lock')};
+  if(!sb){lock();return}
+  sb.auth.onAuthStateChange(ev=>{
+    if(ev==='PASSWORD_RECOVERY')setTimeout(openNewPass,500);
+    if(ev==='SIGNED_OUT'&&me)location.reload();
+  });
+  try{const r=await sb.auth.getSession();if(r.data&&r.data.session&&await startSession())return}catch(e){console.error(e)}
+  lock();
+})();
+
+</script></body></html>
